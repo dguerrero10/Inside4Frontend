@@ -1,0 +1,32 @@
+.doc-text-page {
+  padding: 0 1.5rem;
+
+  &__section {
+    padding: 0 2.5rem 1rem;
+
+    &--header {
+      padding: .5rem 0;
+      border-bottom: 1px solid #e0e0e0;
+
+      &-lg {
+        margin-bottom: .5rem;
+        padding-top: 1.5rem;
+      }
+    }
+
+    &--para {
+      color: #3f3f3f;
+      font-weight: 300;
+    }
+
+    &--wrapper {
+      padding: .5rem 0;
+    }
+
+    &--para {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+  }
+}

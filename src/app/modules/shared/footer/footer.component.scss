@@ -1,0 +1,41 @@
+.footer {
+    background-color: #F7F7F7;
+    color: #3f3f3f;
+    border-top: 1px solid #e0e0e0;
+    padding: 2rem;
+    
+    &__links {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1rem;
+      
+      a, p {
+        color: #3f3f3f;
+        margin-right: 1rem;
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+    
+    &__social-icons {
+      display: flex;
+      justify-content: center;
+      
+      .icon {
+        color: #3f3f3f;
+        font-size: 24px;
+        margin: 0 0.5rem;
+        cursor: pointer;
+
+        &__img {
+          height: 24px;
+          width: 24px;
+        }
+        
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+  

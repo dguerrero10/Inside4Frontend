@@ -1,0 +1,48 @@
+.unauth-navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    
+    &__sign-up-btn {
+        background-color: #37C625 !important;
+    }
+
+    &__list {
+        width: 30%;
+        min-width: 650px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        &--link {
+            padding: .20rem .60rem;
+            border-radius: 6px;
+            background-color: transparent;
+            text-decoration: none;
+            cursor: pointer;
+            color: #3f3f3f;
+            font-size: 12px;
+            font-weight: 500;
+            margin-right: 1rem;
+            transition: background-color ease-in-out 0.3s, color ease-in-out 0.3s, box-shadow ease-in-out 0.3s; // Transitions for link properties
+
+
+            &-active {
+                color: #003F7D;
+                background-color: #fafafa;
+                box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+              }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &:hover {
+                color: #003F7D;
+            }
+        }
+    }
+}

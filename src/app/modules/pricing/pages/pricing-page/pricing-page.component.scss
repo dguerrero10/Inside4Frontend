@@ -1,0 +1,40 @@
+.pricing-page {
+
+    &__masthead {
+        position: relative;
+        height: 400px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background-image: url('../../../../../assets/images/background/blue_abstract_lines_2.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    
+        &--container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            text-align: center;
+        }
+    }
+
+    &__header-lg {
+        font-weight: 500;
+        margin-bottom: .25rem;
+        color: #fff;
+    }
+
+    &__avatar {
+        width: 110px;
+        height: 110px;
+        object-fit: cover; 
+        border-radius: 50%;
+        border: 2px solid #fff;
+        margin-bottom: 1.5rem;
+    }
+}
+
+  

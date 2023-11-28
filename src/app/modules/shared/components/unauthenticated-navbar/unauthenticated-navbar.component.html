@@ -1,0 +1,16 @@
+<mat-toolbar class="unauth-navbar">
+  <div class="unauth-navbar__list">
+    <a
+      *ngFor="let link of links"
+      class="unauth-navbar__list--link"
+      [routerLink]="link.linkPath"
+      [routerLinkActiveOptions]="{ exact: true }"
+      routerLinkActive="unauth-navbar__list--link-active"
+    >
+      {{ link.linkName }}
+    </a>
+    <button mat-flat-button class="unauth-navbar__sign-up-btn">
+      Sign Up <mat-icon>person_outline</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>
