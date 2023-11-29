@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./documentation-page.component.scss']
 })
 export class DocumentationPageComponent {
-  public readonly icon: string = "../../../../../assets/images/icons/lock.png";
+  public readonly lock: string = "../../../../../assets/images/icons/lock.png";
 
 }

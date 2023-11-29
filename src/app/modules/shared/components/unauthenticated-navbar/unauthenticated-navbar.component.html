@@ -1,4 +1,4 @@
-<mat-toolbar class="unauth-navbar">
+<mat-toolbar *ngIf="showNav" class="unauth-navbar">
   <div class="unauth-navbar__list">
     <a
       *ngFor="let link of links"
@@ -9,7 +9,7 @@
     >
       {{ link.linkName }}
     </a>
-    <button mat-flat-button class="unauth-navbar__sign-up-btn">
+    <button (click)="goToAuth()" mat-flat-button class="unauth-navbar__sign-up-btn">
       Sign Up <mat-icon>person_outline</mat-icon>
     </button>
   </div>

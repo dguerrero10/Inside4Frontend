@@ -1,12 +1,26 @@
 .pricing-page {
+    width: 100%;
+    min-height: 50%;
+    margin-top: 4rem;
+    margin-bottom: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__row {
+        height: 50px;
+        display: flex;
+        align-items: center;
+    }
 
     &__masthead {
         position: relative;
-        height: 400px;
+        height: 300px;
         width: 100%;
         margin: 0;
         padding: 0;
-        background-image: url('../../../../../assets/images/background/blue_abstract_lines_2.jpg');
+        background-image: url('../../../../../assets/images/background/abstract2.jpg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -21,10 +35,30 @@
         }
     }
 
-    &__header-lg {
-        font-weight: 500;
-        margin-bottom: .25rem;
-        color: #fff;
+    &__header {
+
+        &--wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        &-md {
+            font-weight: 500;
+            margin-bottom: .25rem;
+            color: #fff;
+        }
+ 
+        &-lg {
+            font-weight: 400;
+            font-size: 44px;
+        }
+    }
+
+    &__para {
+        margin-bottom: 0;
     }
 
     &__avatar {
