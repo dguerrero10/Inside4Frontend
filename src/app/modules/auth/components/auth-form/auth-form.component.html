@@ -1,0 +1,84 @@
+<div class="login-form">
+  <div class="login-form__row--sm">
+    <p class="login-form__header-md">
+      {{ onLogin ? "Login" : "Create Account" }}
+    </p>
+    <mat-icon>{{ onLogin ? "login" : "person_add" }}</mat-icon>
+  </div>
+  <form class="login-form__form">
+    <mat-form-field class="login-form__form--field" appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput />
+    </mat-form-field>
+    <mat-form-field class="login-form__form--field" appearance="outline">
+      <mat-label>Password</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'" />
+      <button
+        mat-icon-button
+        matSuffix
+        (click)="hide = !hide"
+        [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide"
+      >
+        <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+      </button>
+    </mat-form-field>
+    <mat-form-field
+      *ngIf="!onLogin"
+      class="login-form__form--field"
+      appearance="outline"
+    >
+      <mat-label>Confirm password</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'" />
+      <button
+        mat-icon-button
+        matSuffix
+        (click)="hide = !hide"
+        [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide"
+      >
+        <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+      </button>
+    </mat-form-field>
+    <div *ngIf="onLogin" class="login-form__row--xsm">
+      <mat-checkbox color="primary" class="login-form__checkbox"
+        >Stay signed in</mat-checkbox
+      >
+      <p class="login-form__para link">Forgot password?</p>
+    </div>
+
+    <button
+      *ngIf="onLogin"
+      class="login-form__btn--login"
+      mat-raised-button
+      color="accent"
+    >
+      Login
+    </button>
+    <button
+      *ngIf="!onLogin"
+      class="login-form__btn--login"
+      [class.no-margin-top]="!onLogin"
+      mat-raised-button
+      color="accent"
+    >
+      Submit
+    </button>
+
+    <app-or-line-separator />
+
+    <button
+      *ngIf="onLogin"
+      type="button"
+      (click)="onLogin = !onLogin"
+      class="login-form__btn--sign-up"
+      mat-stroked-button
+      color="primary"
+    >
+      <mat-icon>person_add</mat-icon> Create account
+    </button>
+      <p *ngIf="!onLogin" class="login-form__para text-center sm-margin-top">
+        Already have an account? <span class="link" (click)="onLogin = !onLogin">Login</span>
+      </p>
+  </form>
+</div>

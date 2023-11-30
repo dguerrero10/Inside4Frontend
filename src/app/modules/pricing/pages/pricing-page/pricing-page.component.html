@@ -10,11 +10,20 @@
 <div class="pricing-page">
   <div class="pricing-page__header--wrapper">
     <h1 class="pricing-page__header-lg">Inside4 Pricing</h1>
-      <div class="pricing-page__row">
-        <mat-slide-toggle class="pricing-page__toggle"></mat-slide-toggle>    
-        <p class="pricing-page__para">Annual pricing (25% cheaper)</p>
-      </div>
+    <div class="pricing-page__row">
+      <mat-slide-toggle
+        color="primary"
+        class="pricing-page__toggle"
+        (change)="onToggleChange($event.checked)"
+      ></mat-slide-toggle>
+      <p class="pricing-page__para">
+        Annual pricing
+        <span [style.color]="billAnnually ? 'rgb(4, 157, 64)' : 'rgb(107, 107, 107)'" 
+          >(More than 25&percnt; off)</span
+        >   <!-- Green or Gray -->
+      </p>
+    </div>
   </div>
-  <app-pricing-card></app-pricing-card>
+  <app-pricing-card />
 </div>
 <app-footer />

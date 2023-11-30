@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { PricingRoutingModule } from './pricing-routing.module';
 import { PricingPageComponent } from './pages/pricing-page/pricing-page.component';
-import { SharedModule } from '../shared/shared.module';
 import { PricingCardComponent } from './components/pricing-card/pricing-card.component';
+import { SharedModule } from '../shared/modules/shared.module';
 
 
 @NgModule({
