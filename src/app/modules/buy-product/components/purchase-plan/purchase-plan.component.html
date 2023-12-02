@@ -1,0 +1,50 @@
+<div class="purchase-plan">
+  <div class="purchase-plan__row--lg">
+    <h2 class="purchase-plan__header-md">Purchase plan</h2>
+    <mat-progress-bar mode="determinate" value="34"></mat-progress-bar>
+    <div class="purchase-plan__grid-tiny">
+      <div
+        *ngFor="let step of purchaseSteps; let index=index;"
+        class="purchase-plan__step--wrapper"
+      >
+        <div [ngClass]="{'current-step': index === stepPosition}"
+           class="purchase-plan__step"></div>
+        <p class="purchase-plan__step--position">{{ step.stepName }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="purchase-plan__row--sm">
+    <h3 class="purchase-plan__header-sm">Plan type</h3>
+    <mat-radio-group
+      [(ngModel)]="plan"
+      class="purchase-plan__radio-group"
+      aria-label="Select an option"
+    >
+      <mat-radio-button color="accent" class="sm-margin-right" value="basic"
+        >Basic</mat-radio-button
+      >
+      <mat-radio-button color="accent" value="professional"
+        >Professional</mat-radio-button
+      >
+    </mat-radio-group>
+  </div>
+  <div class="purchase-plan__row--sm">
+    <h3 class="purchase-plan__header-sm">Billed</h3>
+    <mat-radio-group
+      [(ngModel)]="interval"
+      class="purchase-plan__radio-group"
+      aria-label="Select an option"
+    >
+      <mat-radio-button color="accent" class="sm-margin-right" value="monthly"
+        >Monthly</mat-radio-button
+      >
+      <mat-radio-button color="accent" value="annually"
+        >Annually
+        <span style="color: rgb(4, 157, 64)"
+          >(More than 25% off)</span
+        ></mat-radio-button
+      >
+    </mat-radio-group>
+  </div>
+</div>

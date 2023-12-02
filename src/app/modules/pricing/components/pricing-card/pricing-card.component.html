@@ -10,59 +10,47 @@
       <h1 class="pricing-card__header-lg">
         <sup class="super-script">&#36;</sup> {{ billAnnually ? 14 : 19 }}
       </h1>
-      <p class="pricing-card__para">Per month{{ billAnnually ? ', billed annually' : '' }}</p>
+      <p class="pricing-card__para">
+        Per month{{ billAnnually ? ", billed annually" : "" }}
+      </p>
     </div>
     <div class="pricing-card__row">
-      <button color="primary" class="pricing-card__action-btn" mat-raised-button>Buy Now</button>
+      <button
+        (click)="navigateToBuyPage('basic')"
+        color="primary"
+        class="pricing-card__action-btn"
+        mat-raised-button
+      >
+        Buy Now
+      </button>
     </div>
     <p class="pricing-card__para">Highlights of plan features:</p>
     <div class="pricing-card__row--sm">
-      <img
-        class="pricing-card__icon"
-        [src]="checkmark"
-      />
+      <img class="pricing-card__icon" [src]="checkmark" />
       <p class="pricing-card__para">Lorem ipsum dolor sit amet consectetur.</p>
     </div>
     <div class="pricing-card__row--sm">
-      <img
-        class="pricing-card__icon"
-        [src]="checkmark"
-      />
+      <img class="pricing-card__icon" [src]="checkmark" />
       <p class="pricing-card__para">Lorem ipsum dolor sit amet consectetur.</p>
     </div>
     <div class="pricing-card__row--sm">
-      <img
-        class="pricing-card__icon"
-        [src]="checkmark"
-      />
+      <img class="pricing-card__icon" [src]="checkmark" />
       <p class="pricing-card__para">Lorem ipsum dolor sit amet consectetur.</p>
     </div>
     <div class="pricing-card__row--sm">
-      <img
-        class="pricing-card__icon"
-        [src]="checkmark"
-      />
+      <img class="pricing-card__icon" [src]="checkmark" />
       <p class="pricing-card__para">Lorem ipsum dolor sit amet consectetur.</p>
     </div>
     <div class="pricing-card__row--sm">
-      <img
-        class="pricing-card__icon"
-        [src]="checkmark"
-      />
+      <img class="pricing-card__icon" [src]="checkmark" />
       <p class="pricing-card__para">Lorem ipsum dolor sit amet consectetur.</p>
     </div>
     <div class="pricing-card__row--sm">
-      <img
-        class="pricing-card__icon"
-        [src]="checkmark"
-      />
+      <img class="pricing-card__icon" [src]="checkmark" />
       <p class="pricing-card__para">Lorem ipsum dolor sit amet consectetur.</p>
     </div>
     <div class="pricing-card__row--sm">
-      <img
-        class="pricing-card__icon"
-        [src]="checkmark"
-      />
+      <img class="pricing-card__icon" [src]="checkmark" />
       <p class="pricing-card__para">Lorem ipsum dolor sit amet consectetur.</p>
     </div>
   </div>
@@ -78,59 +66,47 @@
       <h1 class="pricing-card__header-lg">
         <sup class="super-script">&#36;</sup> {{ billAnnually ? 18 : 24 }}
       </h1>
-      <p class="pricing-card__para">Per month{{ billAnnually ? ', billed annually' : '' }}</p>
+      <p class="pricing-card__para">
+        Per month{{ billAnnually ? ", billed annually" : "" }}
+      </p>
     </div>
     <div class="pricing-card__row">
-      <button color="primary" class="pricing-card__action-btn" mat-raised-button>Buy Now</button>
+      <button
+        (click)="navigateToBuyPage('professional')"
+        color="primary"
+        class="pricing-card__action-btn"
+        mat-raised-button
+      >
+        Buy Now
+      </button>
     </div>
     <p class="pricing-card__para">Highlights of plan features:</p>
     <div class="pricing-card__row--sm">
-      <img
-        class="pricing-card__icon"
-        [src]="checkmark"
-      />
+      <img class="pricing-card__icon" [src]="checkmark" />
       <p class="pricing-card__para">Lorem ipsum dolor sit amet consectetur.</p>
     </div>
     <div class="pricing-card__row--sm">
-      <img
-        class="pricing-card__icon"
-        [src]="checkmark"
-      />
+      <img class="pricing-card__icon" [src]="checkmark" />
       <p class="pricing-card__para">Lorem ipsum dolor sit amet consectetur.</p>
     </div>
     <div class="pricing-card__row--sm">
-      <img
-        class="pricing-card__icon"
-        [src]="checkmark"
-      />
+      <img class="pricing-card__icon" [src]="checkmark" />
       <p class="pricing-card__para">Lorem ipsum dolor sit amet consectetur.</p>
     </div>
     <div class="pricing-card__row--sm">
-      <img
-        class="pricing-card__icon"
-        [src]="checkmark"
-      />
+      <img class="pricing-card__icon" [src]="checkmark" />
       <p class="pricing-card__para">Lorem ipsum dolor sit amet consectetur.</p>
     </div>
     <div class="pricing-card__row--sm">
-      <img
-        class="pricing-card__icon"
-        [src]="checkmark"
-      />
+      <img class="pricing-card__icon" [src]="checkmark" />
       <p class="pricing-card__para">Lorem ipsum dolor sit amet consectetur.</p>
     </div>
     <div class="pricing-card__row--sm">
-      <img
-        class="pricing-card__icon"
-        [src]="checkmark"
-      />
+      <img class="pricing-card__icon" [src]="checkmark" />
       <p class="pricing-card__para">Lorem ipsum dolor sit amet consectetur.</p>
     </div>
     <div class="pricing-card__row--sm">
-      <img
-        class="pricing-card__icon"
-        [src]="checkmark"
-      />
+      <img class="pricing-card__icon" [src]="checkmark" />
       <p class="pricing-card__para">Lorem ipsum dolor sit amet consectetur.</p>
     </div>
   </div>

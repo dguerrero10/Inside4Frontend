@@ -17,6 +17,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/auth/auth.module').then((m) => m.AuthModule),
   },
+  {
+    path: 'buy',
+    loadChildren: () =>
+      import('./modules/buy-product/buy-product.module').then((m) => m.BuyProductModule),
+  },
 ];
 
 @NgModule({

@@ -1,0 +1,27 @@
+.order-summary {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    padding-left: 2rem;
+    max-width: 250px;
+
+    &__header {
+
+        &-sm {
+            font-weight: 500;
+        }
+    }
+
+    &__para {
+        margin-bottom: 0;
+    }
+
+    &__row {
+
+        &--sm {
+            padding: 1rem 0;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
