@@ -3,7 +3,7 @@
     flex-direction: column;
     margin-top: 4rem;
     padding-left: 2rem;
-    max-width: 250px;
+    max-width: 300px;
 
     &__header {
 
@@ -22,6 +22,16 @@
             padding: 1rem 0;
             display: flex;
             justify-content: space-between;
+        }
+    }
+
+    &__checkbox {
+        font-size: 11px;
+        margin-left: -.5rem;
+        margin-bottom: 1rem;
+
+        &--wrapper {
+            display: flex;
         }
     }
 }

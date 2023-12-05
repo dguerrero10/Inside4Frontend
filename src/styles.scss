@@ -32,3 +32,12 @@ body { margin: 0; font-family: 'Raleway', sans-serif; }
 .link:hover {
   text-decoration: underline;
 }
+
+.unclickable {
+  text-decoration: none !important;
+  cursor: not-allowed !important;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}

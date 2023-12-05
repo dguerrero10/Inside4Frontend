@@ -73,6 +73,38 @@
         align-items: center;
         padding: .75rem 0;
     }
+
+    &__bi-form {
+        display: flex;
+        flex-direction: column;
+        padding: 2.5rem 0;
+        width: 50%;
+        min-width: 400px;
+
+        &--row {
+            display: flex;
+            flex-direction: row;
+        }
+
+        &--field {
+            margin-bottom: 1rem;
+        }
+
+        &--wrapper {
+            display: flex;
+            width: 100%;
+            justify-content: flex-start;
+        }
+
+        &--para {
+            margin-bottom: 0;
+        }
+
+        &--sub {
+            font-size: 12px;
+        }
+
+    }
 }
 
 .current-step {

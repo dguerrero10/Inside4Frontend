@@ -9,7 +9,7 @@ import { InitAuthFormService } from 'src/app/core/services/init-auth-form.servic
 })
 export class AuthFormComponent implements OnInit, OnDestroy {
   public hide: boolean = true;
-  public onLogin!: boolean; 
+  public onLogin: boolean = true; 
   
   private readonly destroy$ = new Subject<void>();
 

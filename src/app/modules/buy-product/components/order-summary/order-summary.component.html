@@ -1,12 +1,22 @@
 <div class="order-summary">
-    <h3 class="order-summary__header-sm">Purchase Summary</h3>
-    <div class="order-summary__row--sm border-bottom">
-        <p class="order-summary__para">(Monthly) plan</p>
-        <p class="ordre-summary__para">&#36;20.00</p>
-    </div>
-    <div class="order-summary__row--sm">
-        <p class="order-summary__para bold">Total</p>
-        <p class="ordre-summary__para bold">&#36;20.00</p>
-    </div>
-    <button mat-flat-button color="primary">Next</button>
+  <h3 class="order-summary__header-sm">Purchase Summary</h3>
+  <div class="order-summary__row--sm border-bottom">
+    <p class="order-summary__para">
+      <span class="capitalize">({{ interval }}) </span
+      ><span class="capitalize">{{ plan }}</span> plan
+    </p>
+    <p class="ordre-summary__para">&#36;20.00</p>
+  </div>
+  <div class="order-summary__row--sm">
+    <p class="order-summary__para bold">Total</p>
+    <p class="ordre-summary__para bold">&#36;20.00</p>
+  </div>
+  <div *ngIf="stepPosition == 1" class="order-summary__checkbox--wrapper">
+    <mat-checkbox class="order-summary__checkbox"
+      >I agree to Inside4's privacy policy and terms</mat-checkbox
+    >
+  </div>
+  <button type="button" mat-flat-button color="primary" (click)="nextStep()">
+    Next
+  </button>
 </div>

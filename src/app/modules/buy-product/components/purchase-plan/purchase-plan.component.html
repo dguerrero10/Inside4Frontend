@@ -1,50 +1,123 @@
 <div class="purchase-plan">
   <div class="purchase-plan__row--lg">
     <h2 class="purchase-plan__header-md">Purchase plan</h2>
-    <mat-progress-bar mode="determinate" value="34"></mat-progress-bar>
+    <mat-progress-bar
+      mode="determinate"
+      [value]="progressBarLength"
+    ></mat-progress-bar>
     <div class="purchase-plan__grid-tiny">
       <div
-        *ngFor="let step of purchaseSteps; let index=index;"
+        *ngFor="let step of purchaseSteps; let index = index;"
         class="purchase-plan__step--wrapper"
       >
-        <div [ngClass]="{'current-step': index === stepPosition}"
-           class="purchase-plan__step"></div>
-        <p class="purchase-plan__step--position">{{ step.stepName }}</p>
+        <div
+          [ngClass]="{
+            'current-step': index === stepPosition,
+            'completed-step': step.completed
+          }"
+          class="purchase-plan__step"
+        ></div>
+        <p (click)="goToStep(index)" class="purchase-plan__step--position">
+          {{ step.stepName }}
+        </p>
       </div>
     </div>
   </div>
 
-  <div class="purchase-plan__row--sm">
-    <h3 class="purchase-plan__header-sm">Plan type</h3>
-    <mat-radio-group
-      [(ngModel)]="plan"
-      class="purchase-plan__radio-group"
-      aria-label="Select an option"
-    >
-      <mat-radio-button color="accent" class="sm-margin-right" value="basic"
-        >Basic</mat-radio-button
+  <ng-container *ngIf="currentStep === purchaseSteps[0]?.stepName">
+    <div class="purchase-plan__row--sm">
+      <h3 class="purchase-plan__header-sm">Plan type</h3>
+      <mat-radio-group (change)="onChangePlanTypeOrInterval()"
+        [(ngModel)]="plan"
+        class="purchase-plan__radio-group"
+        aria-label="Select an option"
       >
-      <mat-radio-button color="accent" value="professional"
-        >Professional</mat-radio-button
+        <mat-radio-button color="accent" class="sm-margin-right" value="basic"
+          >Basic</mat-radio-button
+        >
+        <mat-radio-button color="accent" value="professional"
+          >Professional</mat-radio-button
+        >
+      </mat-radio-group>
+    </div>
+    <div class="purchase-plan__row--sm">
+      <h3 class="purchase-plan__header-sm">Billed</h3>
+      <mat-radio-group (change)="onChangePlanTypeOrInterval()"
+        [(ngModel)]="interval"
+        class="purchase-plan__radio-group"
+        aria-label="Select an option"
       >
-    </mat-radio-group>
-  </div>
-  <div class="purchase-plan__row--sm">
-    <h3 class="purchase-plan__header-sm">Billed</h3>
-    <mat-radio-group
-      [(ngModel)]="interval"
-      class="purchase-plan__radio-group"
-      aria-label="Select an option"
-    >
-      <mat-radio-button color="accent" class="sm-margin-right" value="monthly"
-        >Monthly</mat-radio-button
-      >
-      <mat-radio-button color="accent" value="annually"
-        >Annually
-        <span style="color: rgb(4, 157, 64)"
-          >(More than 25% off)</span
-        ></mat-radio-button
-      >
-    </mat-radio-group>
-  </div>
+        <mat-radio-button color="accent" class="sm-margin-right" value="monthly"
+          >Monthly</mat-radio-button
+        >
+        <mat-radio-button color="accent" value="annually"
+          >Annually
+          <span style="color: rgb(4, 157, 64)"
+            >(More than 25% off)</span
+          ></mat-radio-button
+        >
+      </mat-radio-group>
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="currentStep === purchaseSteps[1]?.stepName">
+    <div class="purchase-plan__bi-form--wrapper">
+      <form class="purchase-plan__bi-form">
+        <p class="purchase-plan__bi-form--para">Email</p>
+        <p class="purchase-plan__bi-form--sub">
+          This is how Inside4 will communicate with you.
+        </p>
+        <mat-form-field
+          appearance="outline"
+          class="purchase-plan__bi-form--field"
+        >
+          <mat-label>Email</mat-label>
+          <input matInput />
+        </mat-form-field>
+        <p class="purchase-plan__bi-form--para">Billing Information</p>
+        <p class="purchase-plan__bi-form--sub">
+          This will be displayed on all your invoices and billing communication.
+        </p>
+        <mat-form-field
+          appearance="outline"
+          class="purchase-plan__bi-form--field"
+        >
+          <mat-label>Address line 1</mat-label>
+          <input matInput />
+        </mat-form-field>
+        <mat-form-field
+          appearance="outline"
+          class="purchase-plan__bi-form--field"
+        >
+          <mat-label>Address line 2 (optional)</mat-label>
+          <input matInput />
+        </mat-form-field>
+        <div class="purchase-plan__bi-form--row">
+          <mat-form-field
+            appearance="outline"
+            class="purchase-plan__bi-form--field sm-margin-right"
+          >
+            <mat-label>City</mat-label>
+            <input matInput />
+          </mat-form-field>
+          <mat-form-field
+            appearance="outline"
+            class="purchase-plan__bi-form--field"
+          >
+            <mat-label>Postal code</mat-label>
+            <input matInput />
+          </mat-form-field>
+        </div>
+        <mat-form-field appearance="outline">
+          <mat-label>State</mat-label>
+          <mat-select>
+            <mat-option value="option1">Option 1</mat-option>
+            <mat-option value="option2" disabled>Option 2 (disabled)</mat-option>
+            <mat-option value="option3">Option 3</mat-option>
+          </mat-select>
+        </mat-form-field>
+        
+      </form>
+    </div>
+  </ng-container>
 </div>
